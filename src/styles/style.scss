@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "IBMPlexSans";
+    src: url("../assets/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBMPlexSans";
+    src: url("../assets/fonts/IBMPlexSans_Condensed-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBMPlexSans";
+    src: url("../assets/fonts/IBMPlexSans_Condensed-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    
+    .search-title{
+        font-family: 'IBMPlexSans';
+        font-weight: 500;
+    }
+
+    .search{
+
+        .repo-input{
+            width: 280px;
+            height: 25px;
+            border-radius:8px;
+            border: 1px solid #3d3d3d;
+            transition:all .4s;
+
+            &:after{
+                background-image: url('../assets/img/search.svg');
+            }
+
+            &:focus {
+                background-color: #cacaca63;
+                outline: 1px solid #bbbbbb;
+    
+                &::placeholder {
+                    color: #8b8b8b;
+                    opacity: 0.7;
+                }
+            }
+    
+            &:hover {
+                border: 1px solid #525253;
+            }
+    
+            &::placeholder {
+                font-family: 'IBMPlexSans';
+                font-weight: 300;
+                color: #242424;
+                transition: color .3s, opacity .3s;
+            }
+        }
+
+        .autocomplete{
+            display: flex;
+            flex-direction: column;
+            font-family: 'IBMPlexSans';
+            font-weight: 400;
+            font-size: 10px;
+            box-sizing: border-box;
+            max-height: 105px;
+            overflow: hidden;
+            
+            
+
+            &__item{
+                padding:4px 0px;
+                margin: auto 5px;
+
+                &:hover{
+                    background-color:#9c9c9c85 ;
+                }
+            }
+        }
+
+    }
+}
